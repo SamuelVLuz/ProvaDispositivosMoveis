@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:backgroundTint="#CD009688"
+    tools:context=".CadastrarTarefa">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:backgroundTint="#009688"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/student_name"
+                android:textAlignment="viewEnd"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#94009688"
+                android:text="@string/botao1"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_margin="10dp"
+                android:background="#94009688"
+                android:text="TESTE"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/editTextTitulo"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Título"
+                android:inputType="text"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/editTextDescricao"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Descrição"
+                android:inputType="text"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/editTextData"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="Data"
+                android:inputType="date"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#00BCD4"
+                android:ellipsize="middle"
+                android:onClick="cadastrarTarefa"
+                android:text="@string/botao1"
+                android:textAlignment="center"
+                app:iconSize="10dp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="300dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#00BCD4"
+                android:ellipsize="middle"
+                android:onClick="TelaPrincipal"
+                android:text="@string/botaoretornar"
+                android:textAlignment="center"
+                app:iconSize="10dp" />
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
