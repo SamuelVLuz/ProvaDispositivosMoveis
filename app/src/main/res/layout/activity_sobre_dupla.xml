@@ -54,7 +54,7 @@
             android:layout_height="44dp"
             android:layout_margin="10dp"
             android:background="#94009688"
-            android:text="Teste"
+            android:text="@string/student_name"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18dp" />
@@ -67,7 +67,7 @@
             android:backgroundTint="#00BCD4"
             android:ellipsize="middle"
             android:onClick="telaCadastro"
-            android:text="@string/botao1"
+            android:text="@string/botaoretornar"
             android:textAlignment="center"
             app:iconSize="10dp" />
 

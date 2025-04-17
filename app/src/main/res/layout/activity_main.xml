@@ -111,6 +111,7 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="#00BCD4"
             android:ellipsize="middle"
+            android:onClick="sobreDupla"
             android:text="@string/botao5"
             android:textAlignment="center"
             app:iconSize="10dp" />
