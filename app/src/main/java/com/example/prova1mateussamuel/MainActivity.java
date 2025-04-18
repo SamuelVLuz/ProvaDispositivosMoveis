@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     public void telaCadastro(View v){
         Intent i = new Intent(this, CadastrarTarefa.class);
         startActivity(i);
-
     }
 
     public void sobreDupla(View v){

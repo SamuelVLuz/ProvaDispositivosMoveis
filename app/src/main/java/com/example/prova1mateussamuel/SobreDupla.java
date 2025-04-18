@@ -24,9 +24,8 @@ public class SobreDupla extends AppCompatActivity {
         });
     }
 
-    public void telaPrincipal(View v){
+    public void TelaPrincipal(View v){
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
-
     }
 }
