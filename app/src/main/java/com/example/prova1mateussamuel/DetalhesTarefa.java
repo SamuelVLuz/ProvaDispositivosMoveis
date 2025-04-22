@@ -41,8 +41,7 @@ public class DetalhesTarefa extends AppCompatActivity {
         }
     }
 
-    public void TelaDetalhes(View v){
-        Intent i = new Intent(this, ListagemTarefas.class);
-        startActivity(i);
+    public void retornar(View v){
+        finish();
     }
 }

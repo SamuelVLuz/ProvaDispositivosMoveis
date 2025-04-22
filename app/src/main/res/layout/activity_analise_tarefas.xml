@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".SobreDupla">
+    tools:context=".AnaliseTarefas">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -30,37 +30,29 @@
             android:backgroundTintMode="src_in"
             android:elevation="2dp"
             android:padding="16dp"
-            android:text="@string/botao5"
+            android:text="@string/botao4"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView2"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTarefas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="@color/white"
-            android:backgroundTintMode="src_in"
-            android:elevation="2dp"
-            android:padding="16dp"
-            android:text="@string/student_name"
-            android:textAlignment="inherit"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_height="match_parent"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/botaoretornar"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
             android:onClick="TelaPrincipal"
-            app:cornerRadius="12dp"
+            android:text="@string/botaoretornar"
             android:textColor="@color/cortextobotao"
+            app:cornerRadius="12dp"
             app:strokeColor="#B0BEC5"
-            app:strokeWidth="1dp"/>
+            app:strokeWidth="1dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

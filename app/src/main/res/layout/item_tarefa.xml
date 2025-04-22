@@ -14,6 +14,13 @@
         android:text="Título da tarefa"
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/textDataInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="Informação da Data" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDetalhes"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"

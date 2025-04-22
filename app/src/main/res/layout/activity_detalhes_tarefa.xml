@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/botaoretornar"
-            android:onClick="TelaListagem"
+            android:onClick="retornar"
             app:cornerRadius="12dp"
             android:textColor="@color/cortextobotao"
             app:strokeColor="#B0BEC5"

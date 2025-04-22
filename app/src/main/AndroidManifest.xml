@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Prova1MateusSamuel"
         tools:targetApi="31">
         <activity
+            android:name=".AnaliseTarefas"
+            android:exported="false" />
+        <activity
             android:name=".DetalhesTarefa"
             android:exported="false"
             android:theme="@style/Theme.Prova1MateusSamuel" />

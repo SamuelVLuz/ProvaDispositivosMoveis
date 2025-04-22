@@ -76,20 +76,40 @@ public class CadastrarTarefa extends AppCompatActivity {
     }
 
     public void cadastrarTarefa(View v){
-        //SE ESSE TIVER ALGUMA COISA ESCRITA ELE PASSA
-        if(!TextUtils.isEmpty(editTitulo.getText().toString())){
-            try {
-                bancoDados = openOrCreateDatabase("ListaTarefas", MODE_PRIVATE, null);
-                String sql = "INSERT INTO tarefa (titulo, descricao, data) VALUES (?, ?, ?)";
-                SQLiteStatement stmt = bancoDados.compileStatement(sql);
-                stmt.bindString(1, editTitulo.getText().toString());
-                stmt.bindString(2, editDesc.getText().toString());
-                stmt.bindString(3, editData.getText().toString());
-                stmt.executeInsert();
-                finish();
-            }catch (Exception e) {
-                Log.d("teste2", "passou aqui");
-            }
+        if (TextUtils.isEmpty(editTitulo.getText().toString())) {
+            editTitulo.setError("Digite um título");
+            return;
+        }
+
+        // Verifica se a data escolhida é anterior à data atual
+        Calendar hoje = Calendar.getInstance();
+        hoje.set(Calendar.HOUR_OF_DAY, 0);
+        hoje.set(Calendar.MINUTE, 0);
+        hoje.set(Calendar.SECOND, 0);
+        hoje.set(Calendar.MILLISECOND, 0);
+
+        Calendar dataSelecionada = (Calendar) dataAtual.clone();
+        dataSelecionada.set(Calendar.HOUR_OF_DAY, 0);
+        dataSelecionada.set(Calendar.MINUTE, 0);
+        dataSelecionada.set(Calendar.SECOND, 0);
+        dataSelecionada.set(Calendar.MILLISECOND, 0);
+
+        if (dataSelecionada.before(hoje)) {
+            editData.setError("A data não pode ser anterior à data atual");
+            return;
+        }
+
+        try {
+            bancoDados = openOrCreateDatabase("ListaTarefas", MODE_PRIVATE, null);
+            String sql = "INSERT INTO tarefa (titulo, descricao, data) VALUES (?, ?, ?)";
+            SQLiteStatement stmt = bancoDados.compileStatement(sql);
+            stmt.bindString(1, editTitulo.getText().toString());
+            stmt.bindString(2, editDesc.getText().toString());
+            stmt.bindString(3, editData.getText().toString());
+            stmt.executeInsert();
+            finish();
+        } catch (Exception e) {
+            Log.e("CadastrarTarefa", "Erro ao cadastrar", e);
         }
     }
     public void TelaPrincipal(View v){

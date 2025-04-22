@@ -60,19 +60,22 @@ public class MainActivity extends AppCompatActivity {
     public void telaSobreDupla(View v){
         Intent i = new Intent(this, SobreDupla.class);
         startActivity(i);
-
     }
 
     public void telaListagem(View v){
         Intent i = new Intent(this, ListagemTarefas.class);
         startActivity(i);
-
     }
 
     public void siteCurso(View v){
         Uri uri = Uri.parse("https://presencial.ifrs.edu.br");
         Intent intent = new Intent(Intent. ACTION_VIEW, uri);
         startActivity(intent);
+    }
+
+    public void telaAnalise(View v){
+        Intent i = new Intent(this, AnaliseTarefas.class);
+        startActivity(i);
     }
 
 

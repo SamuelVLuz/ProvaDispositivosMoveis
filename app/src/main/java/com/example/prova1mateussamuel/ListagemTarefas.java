@@ -1,5 +1,6 @@
 package com.example.prova1mateussamuel;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -67,5 +68,10 @@ public class ListagemTarefas extends AppCompatActivity {
 
         adapter = new TarefaAdapter(listaTarefas);
         recyclerTarefas.setAdapter(adapter);
+    }
+
+    public void TelaPrincipal(View v){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 }
