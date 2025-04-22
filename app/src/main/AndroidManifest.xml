@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Prova1MateusSamuel"
         tools:targetApi="31">
         <activity
+            android:name=".DetalhesTarefa"
+            android:exported="false"
+            android:theme="@style/Theme.Prova1MateusSamuel" />
+        <activity
+            android:name=".ListagemTarefas"
+            android:exported="false"
+            android:theme="@style/Theme.Prova1MateusSamuel" />
+        <activity
+            android:name=".tarefa"
+            android:exported="false" />
+        <activity
+            android:name=".Tarefa"
+            android:exported="false"
+            android:theme="@style/Theme.Prova1MateusSamuel" />
+        <activity
             android:name=".SobreDupla"
             android:exported="false" />
         <activity

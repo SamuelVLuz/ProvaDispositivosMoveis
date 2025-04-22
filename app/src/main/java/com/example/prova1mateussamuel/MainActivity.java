@@ -3,6 +3,7 @@ package com.example.prova1mateussamuel;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.net.InetSocketAddress;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,10 +57,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void sobreDupla(View v){
+    public void telaSobreDupla(View v){
         Intent i = new Intent(this, SobreDupla.class);
         startActivity(i);
 
+    }
+
+    public void telaListagem(View v){
+        Intent i = new Intent(this, ListagemTarefas.class);
+        startActivity(i);
+
+    }
+
+    public void siteCurso(View v){
+        Uri uri = Uri.parse("https://presencial.ifrs.edu.br");
+        Intent intent = new Intent(Intent. ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
 

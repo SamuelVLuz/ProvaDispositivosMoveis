@@ -27,6 +27,7 @@ public class CadastrarTarefa extends AppCompatActivity {
     Calendar dataAtual = Calendar.getInstance();
     SQLiteDatabase bancoDados;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
